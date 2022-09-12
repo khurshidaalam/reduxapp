@@ -2,6 +2,8 @@ import {configureStore} from "@reduxjs/toolkit";
 import rootReducers from "../reducers/reducer";
 
 
-const store =  configureStore(rootReducers,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store =  configureStore({
+    reducer : rootReducers
+});
 
 export default store;

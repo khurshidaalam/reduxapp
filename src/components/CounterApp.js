@@ -6,14 +6,22 @@ import counterReducer from '../reducers/counter';
 
 const CounterApp = () => {
     const dispatch = useDispatch(rootReducers);
-    const myState = useSelector((state)=> state.counterReducer);
+    const myState = useSelector((state)=> state.value);
+    
+    const inputHandler = (e)=>{
+
+    }
+
+
     console.log(myState);
   return (
+    <>
     <div>
-        <input type="number" value={myState}/>
+        <input type="number" value={myState} onChange={inputHandler}/>
         <button onClick={()=> dispatch(increment)}>+</button>
         <button onClick={()=> dispatch(decrement)}>-</button>
     </div>
+    </>
   )
 }
 
